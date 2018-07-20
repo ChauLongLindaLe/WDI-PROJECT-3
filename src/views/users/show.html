@@ -1,0 +1,69 @@
+<section class="user-show">
+  <section class="hero is-primary">
+    <div class="hero-body">
+      <!-- <div class="container has-text-centered"> -->
+      <figure class="media-content-image">
+        <p class="image is-128x128">
+          <img src="{{ user.image }}" alt="{{ user.username }}">
+        </p>
+      </figure>
+      <article class="media">
+        <div class="media-content">
+          <div class="content">
+            <p>
+              <h5 class="subtitle">{{ user.username }}</h5>
+              <h5>Tell us about yourself here:</h5>
+              <p>{{ user.bio }}</p>
+            </p>
+          </div>
+        <!-- </div> -->
+      </div>
+    </article>
+    <div class="media-right">
+      <a class="button is-primary" ui-sref="usersEdit({ id: user._id })">Edit</a>
+      <button class="button is-danger toggle-modal" ng-click="toggleModal()" ng-class="{ 'is-active': modalOpen }">Delete</button>
+    </div>
+    </div>
+  </section>
+  <article class="media-recipesFav">
+    <h4 class="title">Favourite Recipes</h4>
+    <div class="columns is-multiline">
+      <div class="column column is-one-quarter-desktop" ng-repeat="favourite in user.favourites">
+          <a ui-sref="recipesShow({ id: favourite.id })">
+            <div class="card">
+              <div class="card-image is-square">
+                <div class="card">
+                  <div class="card-image">
+                    <figure class="image is-4by3">
+                      <img ng-src="{{ favourite.image }}" alt="{{ favourite.title }}">
+                    </figure>
+                    <div class="title">
+                      <a class="delete is-large" ng-click="deleteFavourite(favourite)"></a>
+                      <p class="title is-6">{{ favourite.title }}</p>
+                    </div>
+                  </div>
+                </div>
+                <!-- <button class="button is-danger" ng-click="deleteFavourite(favourite)">Delete</button> -->
+              </div>
+            </div>
+          </a>
+        </div>
+      </div>
+  </article>
+</section>
+
+<!-- modal to make sure user wants to delete their profile -->
+<div class="modal" ng-class="{ 'is-active': modalOpen }">
+  <div class="modal-background"></div>
+  <div class="modal-card">
+    <header class="modal-card-head">
+    </header>
+    <section class="modal-card-body">
+      Are you sure you want to delete your profile?
+    </section>
+    <footer class="modal-card-foot">
+      <button class="button is-success" ng-click="deleteUser()">Delete</button>
+      <button class="button toggle-modal-cancel" ng-click="toggleModal()" ng-class="{ 'is-active': modalOpen }">Cancel</button>
+    </footer>
+  </div>
+</div>

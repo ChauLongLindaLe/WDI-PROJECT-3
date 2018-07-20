@@ -1,0 +1,21 @@
+a.navbar-item:hover, .navbar-link:hover {
+  background: $secondary;
+  color: white;
+  text-decoration: none;
+  border-radius: 20px;
+
+}
+a.navbar-item, .navbar-link {
+  color: $primary;
+}
+nav {
+  font-family: $font-secondary;
+  font-size: 30px;
+}
+.hidden{
+  display:none;
+}
+
+.change-color {
+  background-color: white;
+}
