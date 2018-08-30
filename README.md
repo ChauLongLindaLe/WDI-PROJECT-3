@@ -2,15 +2,13 @@
 # GA WDI-34  Project #3: A MEAN stack Application
 ## 'What's in your fridge?'
 
-
- - Linda Lê
- - Natasha Ramburrun
- - Rachel Dolan
-
+[Heroku Link](https://what-is-in-my-fridge.herokuapp.com/#!/)
 
  What's in your fridge application has been designed and developed by Linda Le, Rachel Dolan and Natasha Ramburrun.
 
  The project was planned using a whiteboard and the project management tool trello. We also worked as a team to complete a wireframe which highlighted the user experience.  
+
+![Screenshot of Landing Page](./readme/whats-in-my-fridge-landing.png)
 
  #### App development
 
