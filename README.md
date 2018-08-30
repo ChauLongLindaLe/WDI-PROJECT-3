@@ -3,7 +3,7 @@
 ## 'What's in your fridge?'
 
 
-[Heroku Link](https://what-is-in-my-fridge.herokuapp.com/#!/)
+[Heroku Link](https://in-my-fridge.herokuapp.com)
 
 An application that aims to reduce food wastage by allowing the user to enter the ingredients they currently have in their fridge and the app, using a third-party API, will present the user recipes based on their input which can then be filtered by dietary requirements and sorted by the number of likes. Built by Linda Le, Rachel Dolan and Natasha Ramburrun.
 
@@ -25,11 +25,12 @@ Setting out, our main aim for MVP was to be able to send requests to the Spoonac
  #### Blockers
 
 As this was our first instance using external APIs having the API be so central to the app made the build process a little more complex. Spoonacular proved harder to implement than we first thought as the process was not as straightforward given that the documentation was split across two different websites, Mashape and RapidAPI. Additionally, once we had figured out how to make a request to the API, the data that was returned was not always correct. i.e. if you searched beef as a main ingredient, a recipe for s'mores would display. I flagged this issue with Spoonacular in hope of getting it fixed.
+There were also other features that I had to abandon such as a Facebook OAuth as it would Enforce HTTPS. All new apps created as of March 2018 have this setting on by default which meant that I could not incorporate it into our app. 
 
 #### Wins
 
-
 ![Screenshot of Landing Page](./readme/whats-in-my-fridge-landing.png)
+Getting to grips with working in the team and constantly fixing merge conflicts was initially a difficulty but once we found our rhythm and once we reached MVP we were able to add additional features such as adding a complex search, autocomplete on ingredients, sorting search results and adding and removing favourites. It proved to be a very fulfilling project and we accomplished more than we thought was possible in a short period of time.
 
  #### App development
 
@@ -39,3 +40,4 @@ We were able to make full use of the Spoonacular API and given that it was our m
 #### More Time
 
 With more time, I would certainly add the ability to post your own images of recipes you have tried to develop more of a community factor. To add to this, I also wanted to include an inspiration page which would display a random selection of the most highly rated recipes.
+In the early stages of planning, I had originally want to incorporate the use of a smart speaker such as Google Home Mini or Alexa as I imagine it would prove helpful whilst cooking. 
